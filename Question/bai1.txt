@@ -1,0 +1,11 @@
+Câu hỏi : cấu hình --global được lưu ở đâu? Khác gì so với --local
+- File cấu hình --global được lưu tại thư mục Home (C:\Users\<Tên_User>\.gitconfig)
+
+- Cấu hình này áp dụng cho tất cả repo
+
+- Điểm khác biệt là phạm vi áp dụng, vị trí lưu trữ và độ ưu tiên.
+
+- --local chỉ áp dụng riêng cho cho repo hiện tại lưu trong file ./gitconfig nằm trong thư mục root của repo.
+
+- Độ ưu tiên: --local >> --global > --system
+
