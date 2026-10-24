@@ -9,3 +9,12 @@ Câu hỏi : cấu hình --global được lưu ở đâu? Khác gì so với --
 
 - Độ ưu tiên: --local >> --global > --system
 
+Câu hỏi: Vì sao dùng git mv? release/lab01 có phải baseline? Vì sao không commit thẳng master dù làm một 
+mình?
+
+- Lợi ích: + bảo toàn lịch sử thay đổi của file, thay vì xem như một file hoàn toàn mới
+            + Đưa ngay vào staging area mà không cần git add.
+- release/lab01 đóng vai trò là 1 baseline để làm cột mốc cho các bài tiếp theo.
+- Không commit vào main để main luôn sẵn sàng với một code sạch sẽ và ổn định.
+    + Cách ly lỗi và thử nghiệm an toàn, xong chạy tốt mới merge vào main.
+    + Đóng gói tính năng vào các branch/commit khác nhau để dễ quản lý.
