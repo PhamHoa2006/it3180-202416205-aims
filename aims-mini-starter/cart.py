@@ -23,6 +23,8 @@ class Cart:
         print("The disc is not in the cart")
         return False
     def print_cart(self):
+        if not self.items:
+            print("The cart is empty")
         for item in self.items: 
             print(item.title)
         return True
