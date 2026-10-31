@@ -22,6 +22,10 @@ class Cart:
             return True
         print("The disc is not in the cart")
         return False
+    def print_cart(self):
+        for item in self.items: 
+            print(item.title)
+        return True
 
     def total_cost(self):
         return sum(item.cost for item in self.items)
