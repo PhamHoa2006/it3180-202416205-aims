@@ -1,0 +1,23 @@
+
+Vì sao phải đồng bộ `master` trước khi gửi PR?
+-Giải quyết xung đột sớm: Phát hiện và xử lý lỗi xung đột code (conflict) ngay trên máy cá nhân thay vì để bị kẹt trên PR.
+
+
+- Đảm bảo tính tích hợp: Kiểm tra xem code mới có tương thích và chạy ổn định với trạng thái `master` mới nhất hay không.
+
+
+- Hỗ trợ review: Giúp PR luôn ở trạng thái "Clean Merge", giúp người review duyệt bài nhanh chóng.
+
+
+Khi nào KHÔNG được rebase?
+- Trên các nhánh công khai/dùng chung: Không rebase các nhánh như `master`, `release/-` hoặc các nhánh `feature/-` đang có nhiều người cùng làm việc.
+
+
+- Lý do: Rebase làm thay đổi mã băm (SHA Hash) của commit, nếu push đè sẽ làm hỏng lịch sử Git trên máy của các thành viên khác.
+
+
+`feature/-` khác `topic/-` ra sao?
+
+- Nhánh `feature/-`: Dùng để phát triển các chức năng nghiệp vụ mã nguồn của dự án (ví dụ: in giỏ hàng, tìm kiếm đĩa).
+
+- Nhánh `topic/-`: Dùng cho các nhiệm vụ hỗ trợ/phi nghiệp vụ ngắn hạn (ví dụ: viết tài liệu, thêm PR template, cấu hình CI/CD).
