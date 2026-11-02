@@ -1,0 +1,13 @@
+Merge base là gì?
+- Khái niệm: Merge base là commit gốc chung gần nhất (common ancestor) của hai nhánh (ví dụ: giữa nhánh `feature/-` và nhánh `master`).
+
+- Vai trò: Git sử dụng Merge base làm mốc tham chiếu để so sánh sự thay đổi giữa hai nhánh, từ đó tính toán tự động việc hợp nhất mã nguồn hoặc phát hiện các vị trí xảy ra xung đột (Merge Conflict).
+
+
+
+Vì sao `master` / `release/*` phải dùng `revert` (mà không dùng `reset`)?
+- Bảo vệ lịch sử chung: Nhánh `master` và `release/*` là các nhánh công khai (public/shared branches) chứa baseline của dự án.
+
+- Không làm vỡ máy làm việc của người khác: `git reset` thực hiện dời con trỏ và viết lại lịch sử (xóa commit). Nếu đã push lên server mà `reset`, người khác khi pull về sẽ bị lệch lịch sử nghiêm trọng.
+
+- Tạo vết kiểm toán an toàn: `git revert` không xóa lịch sử cũ mà tạo một commit mới mang nội dung đảo ngược. Điều này giúp lịch sử dự án minh bạch, giữ nguyên vết kiểm toán và an toàn tuyệt đối cho làm việc nhóm.
