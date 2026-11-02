@@ -4,6 +4,8 @@ All changes to this prj will be documented in this file
 
 ## [Unreleased]
 
+- Cart.sort_by_title() và Cart.sort_by_cost(): Sắp xếp giỏ hàng theo tiêu đề và giá tiền.
+
 ## [1.0.0] - 2026-11-02
 
 ### Added
@@ -14,4 +16,4 @@ All changes to this prj will be documented in this file
 
 ### Fixed
 
-- Giới hạn giỏ hàng từ chối thêm đĩa thứ 21 (#6).
+- Giới hạn giỏ hàng từ chối thêm đĩa thứ 21 (#6)
