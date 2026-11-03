@@ -15,3 +15,5 @@ All changes to this prj will be documented in this file
 ### Fixed
 
 - Giới hạn giỏ hàng từ chối thêm đĩa thứ 21 (#6).
+
+## [1.0.1] - 2026-11-03
