@@ -2,9 +2,9 @@ name: AIMS-mini CI
 
 on:
   push:
-    branches: [ master, release/* ]
+    branches: [ main, release/* ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   test:
@@ -37,4 +37,3 @@ jobs:
       run: |
         python -m unittest discover -s tests -v
 
-        
