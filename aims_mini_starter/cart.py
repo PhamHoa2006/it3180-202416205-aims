@@ -12,7 +12,7 @@ class Cart:
             print("The cart is almost full")
             return False
         self.items.append(dvd)
-        print("Đã thêm đĩa vào giỏ hàng")
+        print("The disc has been add")
         return True
 
     def remove_dvd(self, dvd):
@@ -37,3 +37,7 @@ class Cart:
             raise ValueError("Percent invalid")
         total = self.total_cost()
         return total * (1 - percent / 100.0)
+    def sort_by_title(self):
+        self.items.sort(key=lambda dvd: dvd.title if hasattr(dvd, 'title') else "")
+    def sort_by_cost(self):
+        self.items.sort(key=lambda dvd: dvd.cost if hasattr(dvd, 'cost') else 0)
